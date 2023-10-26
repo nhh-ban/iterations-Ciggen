@@ -5,6 +5,8 @@
 # All tests are packed in a function test_stations_metadata that apples
 # all the aforementioned tests
 
+
+# checking column names in new dataframe is correct. 
 test_stations_metadata_colnames <-
   function(df) {
     
@@ -17,6 +19,8 @@ test_stations_metadata_colnames <-
     }
   }
 
+
+# checking number of samples is reasonable large between 5K-10K. 
 test_stations_metadata_nrows <-
   function(df) {
     
@@ -32,6 +36,8 @@ test_stations_metadata_nrows <-
     }
   }
 
+# checking that the two first columns contains character based values, and the 
+# three last is number based. 
 test_stations_metadata_coltypes <-
   function(df) {
     expected_coltypes <-
@@ -45,6 +51,7 @@ test_stations_metadata_coltypes <-
     }
   }
   
+# checking if missing stations is reasonable low. 
 test_stations_metadata_nmissing <-
   function(df) {
     max_miss_vals <- 200
@@ -56,6 +63,7 @@ test_stations_metadata_nmissing <-
     }
   }
 
+# checking if "latestData" is set to UTC-formatting. 
 test_stations_metadata_latestdata_timezone <-
   function(df) {
     
@@ -67,6 +75,7 @@ test_stations_metadata_latestdata_timezone <-
   }
 
 
+# summarize tests, PASS or FAIL. 
 test_stations_metadata <- 
   function(df){
     test_stations_metadata_colnames(df)
