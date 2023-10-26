@@ -6,6 +6,12 @@
 # httr
 # jsonlite
 
+
+# Loading packages --- 
+
+library(httr)
+library(jsonlite)
+
 GQL <- function(query,
                 ...,
                 .token = NULL,
@@ -35,3 +41,5 @@ GQL <- function(query,
   }
   res$data
 }
+
+
